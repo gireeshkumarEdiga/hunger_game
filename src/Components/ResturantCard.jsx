@@ -14,7 +14,7 @@ const ResturantCard = (props) => {
                 </div>
                 <div>
                     <h3>{props.username}</h3>
-                    <p>{props.address.join(",")}</p>
+                    <p>{props.address}</p>
                     <p>Cost : {props.costforone}</p>
                     <p>Accepts : {newPaymentArray.join(",")}</p>
                 </div>
