@@ -1,0 +1,6 @@
+.restaurantcards{
+    display: grid;
+    grid-template-rows:auto;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 10px;
+}
