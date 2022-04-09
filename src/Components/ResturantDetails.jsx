@@ -19,6 +19,10 @@ const ResturantDetails = () => {
         setPaymentMethod(payment_methods);
     }
 
+    const change = (a,b) => {
+        return a.data.costforone - b.data.costforone;
+    }
+
     const filterLogic = ({rating, payment_methods}) => {
         //console.log("data",data);
 
@@ -48,6 +52,8 @@ const ResturantDetails = () => {
             <button key={payment_methods} onClick={() => handlePayment(payment_methods)}>{payment_methods}</button>
         )
     })}
+    <button onClick={() => change(data)}>Low to High</button>
+    <button onClick={()=> change(data)}>High to Low</button>
     <div className="restaurantcards">
     {resdata.filter(filterLogic)
     .map((item,index) => {
